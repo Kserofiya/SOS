@@ -33,7 +33,6 @@
 	.header {
 		position: fixed;
 		margin-top: 0;
-		width: 100vw;
 		justify-content: space-around;
 		padding-left: 0;
 	}
@@ -53,9 +52,6 @@
 	}
 	.header .hamburger {
 		display: flex;
-	}
-	.main {
-		width: 100vw;
 	}
 	.main h1 {
 		font-size: 40px;
