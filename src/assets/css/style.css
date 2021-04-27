@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+	padding: 0;
+}
+
+@media (max-width: 486px) {
+	.main .header {
+		position: fixed;
+		margin-top: 0;
+		width: 100vw;
+		justify-content: space-around;
+		padding-left: 0;
+	}
+	.main .header .links {
+		display: none;
+	}
+	.main .header .languages {
+		width: 20px;
+		margin-right: 40px;
+	}
+	.main .header .console {
+		width: 100px;
+		justify-content: space-around;
+	}
+	.main h1 {
+		font-size: 40px;
+		margin-top: 0;
+		padding-top: 180px;
+	}
+	.main h3 {
+		font-size: 20px;
+	}
+	.main .buy-on-steam {
+		font-size: 13px;
+	}
+}
+
+.active {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+.main {
+    background: 
+	radial-gradient(189.96% 61.18% at 50% 38.82%, rgba(255, 181, 72, 0) 0%, rgba(52, 44, 29, 0.80319) 73.22%, #08090A 99.74%),
+	url('../img/bg-photo.png') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+}
+
+.logo a {
+	text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 22px;
+    padding-left: 120px;
+    padding-right: 120px;
+	align-items: center;
+}
+
+.links {
+    width: 473px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.languages {
+	width: 170px;
+    display: flex;
+    align-items: center;
+	justify-content: space-between;
+}
+
+.languages svg:first-child {
+	margin-right: 18px;
+}
+
+.languages svg {
+	cursor: pointer;
+}
+
+.console {
+    display: flex;
+    align-items: center;
+}
+
+/* Select changed */
+.selectbox {
+	vertical-align: middle;
+	cursor: pointer;	
+	margin: 4px 0;
+}
+.selectbox .select {
+	width: 30px;
+	height: 30px;
+	margin-right: 25px;	
+	line-height: 30px;
+	padding: 0 0 0 10px;
+	font-size: 16px;
+	font-family: calibri, arial, verdana, tahoma;
+	color: #fff;	
+	background: transparent;	
+	-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+			border-radius: 3px;	
+}
+.selectbox .select:hover {
+	background-position: 0 -10px;
+}
+.selectbox.focused .select {
+	border: 1px solid #5794BF;
+}
+.selectbox .select .text {
+	display: block;
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.selectbox .trigger {
+	position: absolute;	top: 0;	right: 0;
+	width: 34px;
+	height: 100%;	
+}
+.selectbox .trigger .arrow {
+	position: absolute; 
+	top: 14px;	
+	right: -15px;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 7px solid #FF7700;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	filter: alpha(opacity=30);
+}
+.selectbox:hover .arrow {
+	opacity: 0.8;
+}
+.selectbox .dropdown {
+	top: 33px;
+	width: 55px;
+	margin: 0;
+	padding: 4px 0;
+	background: rgba(0, 0, 0, 0.75);	
+	box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+	font-size: 16px;
+    font-family: calibri, arial, verdana, tahoma;
+	color: #fff;
+	-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+			border-radius: 3px;
+}
+.selectbox li {
+	padding: 5px 10px 6px;
+	color: #fff;
+    list-style: none;
+}
+.selectbox li:hover {
+	background: transparent;
+	color: #FF7700;
+}
+
+.pen {
+	width: 0px;
+	height: 30px;
+	opacity: 0.5;
+	border: 0.873968px solid #FFFFFF;
+}
+
+.hamburger {
+	display: flex;
+	width: 30px;
+	height: 30px;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.hamburger span {
+	width: 100%;
+	height: 3px;
+	background-color: #FF7700;
+}
+
+h1 {
+	font-family: "Bebas Neue";
+	margin-top: 40px;
+	margin-bottom: 0;
+	padding: 0;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+h3 {
+	margin-top: 10px;
+	font-family: "Bebas Neue";
+	font-size: 24px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.buy-on-steam {
+	margin-left: 50%;
+	transform: translate(-50%, 0);
+	margin-top: 30px;
+	padding: 10px;
+	font-family: "Open Sans";
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	color: #1A1917;
+	background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.span-steam {
+	margin-left: 10px;
+	margin-right: 15px;
+	height: 24px;
+	opacity: 0.5;
+	border: 0.873968px solid #1A1917;
+	transform: matrix(1, 0, 0.04, 1, 0, 0);
+}
+
+.the-story {
+	margin-top: 180px;
+	margin-left: 50%;
+	transform: translate(-50%, 0);
+	font-family: "Open Sans";
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.scroll-down {
+	margin-left: 50%;
+	transform: translate(-50%, 0);
+	cursor: pointer;
+}
+
+.about {
+    background: 
+	radial-gradient(189.96% 61.18% at 50% 38.82%, rgba(255, 181, 72, 0) 0%, rgba(52, 44, 29, 0.80319) 73.22%, #08090A 99.74%),
+	radial-gradient(rgba(15, 15, 15, 0.6) 0%, rgba(15, 15, 15, 0.6) 100%),
+	url('../img/about.png') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.sos {
+	padding-top: 107px;
+	margin-left: 120px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.royal-game {
+	margin-left: 120px;
+	width: 400px;
+	font-size: 36px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+.span-about {
+	margin-left: 120px;
+	width: 300px;
+	height: 3px;
+	background-color: #FFFFFF;
+	border-radius: 4px;
+}
