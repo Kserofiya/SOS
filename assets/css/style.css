@@ -3,14 +3,6 @@
 	padding: 0;
 }
 
-.active {
-	display: block;
-}
-
-.hide {
-	display: none;
-}
-
 @media (min-width: 992px) and (max-width: 1199px) {
 	.header .hamburger {
 		display: none;
