@@ -3,24 +3,59 @@
 	padding: 0;
 }
 
-@media (max-width: 486px) {
-	.main .header {
+@media (min-width: 992px) and (max-width: 1199px) {
+	.header .hamburger,  .header .links-mobile{
+		display: none;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.header .hamburger,  .header .links-mobile{
+		display: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.header .hamburger,  .header .links-mobile{
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.header {
 		position: fixed;
 		margin-top: 0;
 		width: 100vw;
 		justify-content: space-around;
 		padding-left: 0;
 	}
-	.main .header .links {
+	.header .links {
 		display: none;
 	}
-	.main .header .languages {
+	.header .languages {
 		width: 20px;
 		margin-right: 40px;
 	}
-	.main .header .console {
+	.header .console {
 		width: 100px;
 		justify-content: space-around;
+	}
+	.header .hamburger {
+		display: flex;
+	}
+	.header .links-mobile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 50%;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: rgba(255, 119, 0, 0.8);
+		z-index: 20;
+		transition: 0.6s all;
 	}
 	.main h1 {
 		font-size: 40px;
@@ -32,7 +67,9 @@
 	}
 	.main .buy-on-steam {
 		font-size: 13px;
+		margin-bottom: 100%;
 	}
+
 }
 
 .active {
@@ -53,20 +90,16 @@
     height: 100vh;
 }
 
-header {
-    width: 100%;
-}
-
 .logo a {
 	text-decoration: none;
 }
 
 .header {
+	position: fixed;
+	width: 100vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 22px;
-    padding-left: 120px;
-    padding-right: 120px;
 	align-items: center;
 }
 
@@ -86,8 +119,20 @@ header {
     color: #FFFFFF;
 }
 
+.links a:hover {
+	color: #FF7700;
+	font-size: 13px;
+}
+
+.header-wrapper {
+	display: flex;
+	width: 200px;
+	justify-content: space-around;
+}
+
 .languages {
-	width: 170px;
+	width: 50px;
+	margin-right: 10px;
     display: flex;
     align-items: center;
 	justify-content: space-between;
@@ -103,7 +148,9 @@ header {
 
 .console {
     display: flex;
+	justify-content: space-around;
     align-items: center;
+	width: 100px;
 }
 
 /* Select changed */
@@ -207,9 +254,10 @@ header {
 
 h1 {
 	font-family: "Bebas Neue";
-	margin-top: 40px;
+	margin-top: 0;
 	margin-bottom: 0;
 	padding: 0;
+	padding-top: 130px;
 	font-size: 50px;
 	font-weight: bold;
 	text-align: center;
