@@ -11,3 +11,18 @@ $('.the-story, .scroll-down').click(() => {
         scrollTop: $('.about').offset().top
     }, 300);
 });
+
+const burger = document.querySelector('.hamburger'),
+      linksMobile = document.querySelector('.links'),
+      linkActive = document.querySelectorAll('.link_active');
+
+burger.addEventListener('click', (e) => {
+    e.preventDefault();
+    linksMobile.classList.toggle('links_active');
+});
+
+linkActive.forEach(item => {
+    item.addEventListener('click', () => {
+        linksMobile.classList.toggle('links_active');
+    });
+})
